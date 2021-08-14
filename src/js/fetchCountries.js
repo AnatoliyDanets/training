@@ -45,6 +45,7 @@
 
 
 // Пагинация
+import '../style/styles';
 import NewsApiService from './news-service';
 import articlesTmpl from '../templates/articles.hbs'
 const refs = {
