@@ -1,0 +1,12 @@
+{{#each this}}
+<li class=" articles-item">
+    <a href="{{url}}" target="blank" rel="noopener noreferrer" class="link">
+        <article>
+            <img src="{{urlToImage}}" alt="" width="480">
+            <h2>{{title}}</h2>
+            <p>Posted by:{{author}}</p>
+            <p>{{description}}</p>
+        </article>
+    </a>
+</li>
+{{/each}}
