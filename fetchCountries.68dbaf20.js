@@ -9,4 +9,4 @@ var e,t=arguments[3];!function(t,r){"object"==typeof exports&&"object"==typeof m
 },{"handlebars/dist/handlebars.runtime":"pAws"}],"irxn":[function(require,module,exports) {
 "use strict";var e=r(require("./news-service")),t=r(require("../templates/articles.hbs"));function r(e){return e&&e.__esModule?e:{default:e}}const n={searchForm:document.querySelector(".js-search-form"),articleContainer:document.querySelector(".js-articles-container"),loadBtn:document.querySelector('[data-action="load-more"]')},c=new e.default;function a(e){e.preventDefault(),u(),c.query=e.currentTarget.elements.query.value,c.resetPage(),c.fetchArticles().then(o)}function i(){c.fetchArticles().then(o)}function o(e){n.articleContainer.insertAdjacentHTML("beforeend",(0,t.default)(e))}function u(){n.articleContainer.innerHTML=""}n.searchForm.addEventListener("submit",a),n.loadBtn.addEventListener("click",i);
 },{"./news-service":"IuX0","../templates/articles.hbs":"SLHY"}]},{},["irxn"], null)
-//# sourceMappingURL=/parcel-project-template/fetchCountries.68dbaf20.js.map
+//# sourceMappingURL=/training/fetchCountries.68dbaf20.js.map
