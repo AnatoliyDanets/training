@@ -1,3 +1,4 @@
+const API_KEY = '875e058abcba44d5a7fc87e242778b12';
 const BASE_URL = 'https://newsapi.org/v2';
 export default class NewsApiService {
     constructor() {
@@ -8,7 +9,7 @@ export default class NewsApiService {
 
         const options = {
             headers: {
-                Authorization:'875e058abcba44d5a7fc87e242778b12',
+                Authorization: API_KEY,
             }
         };
 
