@@ -63,12 +63,12 @@ function onSearch(e) {
     clearArticles();
     newApiService.query = e.currentTarget.elements.query.value;
     newApiService.resetPage();
-    newApiService.fetchArticles().then(appendArticles);
+    newApiService.fetchArticles().then(appendArticles).catch(error=>console.log(error));
 
 }
 
 function onLoadMore() {
-    newApiService.fetchArticles().then(appendArticles);
+    newApiService.fetchArticles().then(appendArticles).catch(error=>console.log(error));
 }
 function appendArticles(articles) {
     refs.articleContainer.insertAdjacentHTML('beforeend', articlesTmpl(articles))
