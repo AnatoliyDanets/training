@@ -53,6 +53,8 @@ const refs = {
     articleContainer: document.querySelector('.js-articles-container'),
     loadBtn: document.querySelector('[data-action="load-more"]')
 }
+
+
 const newApiService = new NewsApiService();
 refs.searchForm.addEventListener('submit', onSearch);
 
@@ -68,7 +70,14 @@ function onSearch(e) {
 }
 
 function onLoadMore() {
-    newApiService.fetchArticles().then(appendArticles).catch(error=>console.log(error));
+    newApiService.fetchArticles().then(appendArticles).catch(error => console.log(error));
+    setTimeout(() => {
+        const element = document.getElementById('js-container');
+        element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'end',
+        })
+    },800)
 }
 function appendArticles(articles) {
     refs.articleContainer.insertAdjacentHTML('beforeend', articlesTmpl(articles))
